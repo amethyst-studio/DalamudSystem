@@ -44,6 +44,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include=".github\workflows\" />
+    <None Include=".github\workflows\publish.yml" />
   </ItemGroup>
 </Project>
