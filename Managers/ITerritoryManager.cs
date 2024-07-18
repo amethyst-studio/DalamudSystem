@@ -1,8 +1,9 @@
 
 using Dalamud.Plugin.Services;
+using DalamudSystem.Managers.Base;
 using Lumina.Excel.GeneratedSheets;
 
-namespace DalamudSystem.Manager;
+namespace DalamudSystem.Managers;
 
 public class ITerritoryManager : IManager, IDisposable
 {

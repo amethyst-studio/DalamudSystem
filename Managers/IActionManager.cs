@@ -1,7 +1,8 @@
 
+using DalamudSystem.Managers.Base;
 using FFXIVClientStructs.FFXIV.Client.Game;
 
-namespace DalamudSystem.Manager;
+namespace DalamudSystem.Managers;
 
 public unsafe class IActionManager : IManager, IDisposable
 {

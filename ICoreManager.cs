@@ -4,8 +4,9 @@ using Dalamud.Interface.Windowing;
 using Dalamud.IoC;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
-using DalamudSystem.Manager;
 using DalamudSystem.Managers;
+using DalamudSystem.Managers.Base;
+using DalamudSystem.Module;
 
 namespace DalamudSystem;
 

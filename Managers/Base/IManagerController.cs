@@ -1,5 +1,5 @@
 
-namespace DalamudSystem.Manager;
+namespace DalamudSystem.Managers.Base;
 
 public static class IManagerController
 {

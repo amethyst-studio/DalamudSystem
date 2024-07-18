@@ -1,5 +1,5 @@
 
-namespace DalamudSystem.Manager;
+namespace DalamudSystem.Managers.Base;
 
 public abstract class IManager(string? ManagerName) : IDisposable
 {

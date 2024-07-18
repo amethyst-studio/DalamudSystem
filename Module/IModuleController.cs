@@ -1,7 +1,5 @@
 
-using DalamudSystem.Module;
-
-namespace DalamudSystem.Manager;
+namespace DalamudSystem.Module;
 
 public static class IModuleController
 {

@@ -1,8 +1,9 @@
 
 
+using DalamudSystem.Managers.Base;
 using System.Numerics;
 
-namespace DalamudSystem.Manager;
+namespace DalamudSystem.Managers;
 
 public class IMovementManager : IManager, IDisposable
 {
