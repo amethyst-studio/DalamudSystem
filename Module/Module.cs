@@ -29,7 +29,7 @@ public abstract class IModule : Window, IDisposable
     {
         SetWindowOptions();
         ICoreManager.WindowManager.AddWindow(this);
-        ICoreManager.Commands.AddHandler($"/{ModuleCommand.ToLower()}", new CommandInfo(
+        ICoreManager.Commands.AddHandler($"/{ModuleCommand}", new CommandInfo(
           (command, args) =>
           {
               Toggle();
@@ -58,7 +58,7 @@ public abstract class IModule : Window, IDisposable
     public void Dispose()
     {
         ICoreManager.WindowManager.RemoveWindow(this);
-        ICoreManager.Commands.RemoveHandler($"/{ModuleName.ToLower()}");
+        ICoreManager.Commands.RemoveHandler($"/{ModuleCommand}");
         ICoreManager.Framework.Update -= Tick;
         Every.Clear();
         IDispose();
