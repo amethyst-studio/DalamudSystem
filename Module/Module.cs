@@ -10,18 +10,26 @@ namespace DalamudSystem.Module;
 public abstract class IModule : Window, IDisposable
 {
     public readonly string ModuleName;
+    public readonly string ModuleCommand;
     public readonly Every Every = new Every();
 
     public IModule(string ModuleName, ImGuiWindowFlags ImGuiFlags) : base(ModuleName, ImGuiFlags)
     {
         this.ModuleName = ModuleName;
+        this.ModuleCommand = ModuleName.ToLower();
+    }
+
+    public IModule(string ModuleName, string ModuleCommand, ImGuiWindowFlags ImGuiFlags) : base(ModuleName, ImGuiFlags)
+    {
+        this.ModuleName = ModuleName;
+        this.ModuleCommand = ModuleCommand.ToLower();
     }
 
     internal void Load()
     {
         SetWindowOptions();
         ICoreManager.WindowManager.AddWindow(this);
-        ICoreManager.Commands.AddHandler($"/{ModuleName.ToLower()}", new CommandInfo(
+        ICoreManager.Commands.AddHandler($"/{ModuleCommand.ToLower()}", new CommandInfo(
           (command, args) =>
           {
               Toggle();
